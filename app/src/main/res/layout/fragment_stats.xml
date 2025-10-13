@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 제목 -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="흡연 통계"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- 탭 (UI만, 일별 활성) -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.tabs.TabItem android:text="일별"/>
+            <com.google.android.material.tabs.TabItem android:text="주별"/>
+            <com.google.android.material.tabs.TabItem android:text="월별"/>
+        </com.google.android.material.tabs.TabLayout>
+
+        <!-- 카드형 컨테이너 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📅 날짜 선택"
+                android:textSize="14sp"
+                android:textColor="#777777"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- 달력 -->
+            <CalendarView
+                android:id="@+id/calendar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+
+        <!-- 3개의 요약 카드 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <LinearLayout
+                android:id="@+id/cardCount"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:padding="14dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="횟수"
+                    android:textColor="#777777"
+                    android:textSize="13sp"/>
+                <TextView
+                    android:id="@+id/tvCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0회"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:layout_marginTop="6dp"/>
+            </LinearLayout>
+
+            <Space android:layout_width="8dp" android:layout_height="0dp"/>
+
+            <LinearLayout
+                android:id="@+id/cardAvg"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:padding="14dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="평균"
+                    android:textColor="#777777"
+                    android:textSize="13sp"/>
+                <TextView
+                    android:id="@+id/tvAvg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0분"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:layout_marginTop="6dp"/>
+            </LinearLayout>
+
+            <Space android:layout_width="8dp" android:layout_height="0dp"/>
+
+            <LinearLayout
+                android:id="@+id/cardTotal"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:padding="14dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="총 시간"
+                    android:textColor="#777777"
+                    android:textSize="13sp"/>
+                <TextView
+                    android:id="@+id/tvTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0분"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:layout_marginTop="6dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 상세 기록 리스트 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="상세 기록"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="12dp"/>
+
+        <LinearLayout
+            android:id="@+id/listContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="8dp"
+            android:layout_marginTop="6dp"/>
+
+    </LinearLayout>
+</ScrollView>

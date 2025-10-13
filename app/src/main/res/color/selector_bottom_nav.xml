@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 선택됨 -->
+    <item android:state_checked="true" android:color="?attr/colorPrimary" />
+    <!-- 비활성(눌 수 없음) -->
+    <item android:state_enabled="false" android:color="#9E9E9E" />
+    <!-- 기본 -->
+    <item android:color="#4D4D4D" />
+</selector>

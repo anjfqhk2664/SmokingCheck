@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F3F4F6"
+    android:padding="12dp"
+    android:orientation="horizontal"
+    android:layout_marginTop="6dp">
+
+    <TextView
+        android:id="@+id/tvStartTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="오후 01:03"
+        android:textColor="#333333"/>
+
+    <TextView
+        android:id="@+id/tvDur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0분 3초"
+        android:textColor="#666666"/>
+</LinearLayout>
